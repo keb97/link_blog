@@ -1,10 +1,10 @@
 <h1>The Best Links on the Internet</h1>
-
+<h2>All times in Pacific Time!</h2>
 <table>
   <tr>
     <th>Link</th>
     <th>Link description</th>
-    <th></th>
+    <th>Posted at:</th>
     <th></th>
     <th></th>
   </tr>
@@ -13,6 +13,7 @@
   <tr>
     <td><%= link_to(blog.link, blog.link) %></td>
     <td><%= blog.linktext %></td>
+    <td><%= blog.created_at.strftime("%l:%M %P on %b %-d, %Y") %></td>
     <td><%= link_to 'Show', blog %></td>
     <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
     <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,3 +24,6 @@
 <br />
 
 <%= link_to 'New Link', new_blog_path %>
+<br />
+
+
